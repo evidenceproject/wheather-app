@@ -44,8 +44,7 @@ const loadMapInfo = () => {
     const localStoragePosition = localStorage.getItem("map-info");
     if (localStoragePosition == null){
         mapPosition = {
-            lat: 0,
-            lng: 0,
+            center: [0,0],
             zoom: 11
         };
     } else {
@@ -125,7 +124,7 @@ const renderMap = () => {
     map = new mapboxgl.Map({
         container: 'mi_super_mapa', 
         style: 'mapbox://styles/mapbox/streets-v11',
-        center: [mapPosition.lng, mapPosition.lat], 
+        center: mapPosition.center, 
         zoom: mapPosition.zoom 
     });
 }
