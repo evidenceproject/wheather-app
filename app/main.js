@@ -45,7 +45,7 @@ const loadMapInfo = () => {
     if (localStoragePosition == null){
         mapPosition = {
             center: [0,0],
-            zoom: 3
+            zoom: 2
         };
     } else {
         mapPosition = JSON.parse(localStoragePosition);
